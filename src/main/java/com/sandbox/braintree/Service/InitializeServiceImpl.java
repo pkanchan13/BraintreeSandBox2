@@ -100,7 +100,7 @@ public class InitializeServiceImpl implements InitializeService {
             payobj.setPhone(customerResult.getTarget().getPhone());
             paymentMethodRepository.save(payobj);
         } catch (NullPointerException e) {
-            System.out.println(e);
+           e.printStackTrace();
         }
         response.setCustomerId(braintreeId);
         response.setFirstname(customerResult.getTarget().getFirstName());
